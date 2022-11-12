@@ -26,7 +26,7 @@ class SolAdapter (var items: ArrayList<Sol>,val selectedOptionMenu:(Int, Int)-> 
 
         holder.textoAdapter.setOnMenuItemClickListener{
             when(it.itemId){
-                R.id.action_copiar -> selectedOptionMenu(1,position)
+                R.id.action_copiar -> selectedOptionMenu(1,position )
                 R.id.action_eliminar -> selectedOptionMenu(0,position)
             }
             return@setOnMenuItemClickListener true

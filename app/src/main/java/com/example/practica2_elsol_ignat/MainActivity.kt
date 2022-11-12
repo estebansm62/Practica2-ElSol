@@ -1,7 +1,10 @@
 package com.example.practica2_elsol_ignat
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -11,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val items = ArrayList<Sol>()
         items.add(Sol(R.drawable.corona_solar, "Corona solar"))
         items.add(Sol(R.drawable.erupcionsolar, "Erupcion solar"))
@@ -18,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         items.add(Sol(R.drawable.filamentos, "Filamentos"))
         items.add(Sol(R.drawable.magnetosfera, "Magnetosfera"))
         items.add(Sol(R.drawable.manchasolar, "Mancha solar"))
+
 
         fun selectedOptionMenu(op:Int, itemCard: Int){
             when(op){
@@ -44,6 +49,24 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
         recyclerView.adapter = adaptador
+    }
+
+    fun lanzarComparar(){
+        val i = Intent(this, CompararActivity::class.java)
+        startActivity(i)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.activity_menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id  = item.itemId
+        if(id == R.id.action_comparar){
+            lanzarComparar()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 

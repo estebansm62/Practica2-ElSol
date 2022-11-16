@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Practica2-ElSol_Ignat</string>
+    <string name="comparar_planetas">Comparar planetas</string>
+    <string name="distancia_al_sol">Distancia al sol</string>
+    <string name="densidad">Densidad</string>
+    <string name="diametro">Diametro</string>
+    <string name="planeta_1">Planeta 1</string>
+    <string name="planeta_2">Planeta 2</string>
 </resources>
